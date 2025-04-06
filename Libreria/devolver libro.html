@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devolución de Libro</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reserva.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2><i class="fas fa-book"></i> Devolución de Libro</h2>
+    <form>
+      <div class="form-group">
+        <label for="Nombre"><i class="fas fa-user"></i> Nombre</label>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Tu nombre completo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="libro"><i class="fas fa-book-open"></i> Libro</label>
+        <input list="libros" id="libro" name="libro" placeholder="Buscar título de libro" required>
+        <datalist id="libros">
+          <option value="Cien años de soledad">
+          <option value="Don Quijote de la Mancha">
+          <option value="La sombra del viento">
+          <option value="El código Da Vinci">
+          <option value="Harry Potter y la piedra filosofal">
+          <option value="Matar a un ruiseñor">
+        </datalist>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_devolucion"><i class="fas fa-calendar-alt"></i> Fecha de devolución</label>
+        <input type="date" id="fecha_devolucion" name="fecha_devolucion" class="styled-date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono"><i class="fas fa-phone-alt"></i> Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ubicacion"><i class="fas fa-map-marker-alt"></i> Ubicación</label>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej. Lima, Perú" required style="flex: 1;">
+          <button type="button" class="map-btn" id="map-btn">
+            Ver mapa
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje"><i class="fas fa-comment-alt"></i> Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="¿Algo que debamos saber sobre la devolución?"></textarea>
+      </div>
+
+      <button type="submit"><i class="fas fa-paper-plane"></i> Devolver</button>
+    </form>
+
+    
+  <script src="scrips/devolucion.js"></script>
+</body>
+</html>
